@@ -5,7 +5,7 @@ For example if N = 4 then stair pattern will be like:
 *
 **
 ***
-*****/
+****               */
 
 import java.util.Scanner;
 public class q3 {

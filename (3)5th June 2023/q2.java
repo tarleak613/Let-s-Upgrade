@@ -4,7 +4,7 @@ For example if N = 3, M = 4 then pattern will be like:
 
 ****
 ****
-**** */
+****      */
 
 import java.util.Scanner;
 public class q2 {
