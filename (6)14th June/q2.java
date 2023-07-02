@@ -1,31 +1,28 @@
-import java.util.*;
-public class q2 {
+/* You are given two integer matrices A and B having same size(Both having same number of rows (N) and columns (M).
+ You have to subtract matrix B from A and return the resultant matrix. (i.e. return the matrix A - B).
+
+If A and B are two matrices of the same order (same dimensions). 
+Then A - B is a matrix of the same order as A and B and its 
+elements are obtained by doing an element wise subtraction of A from B */
+class q2{
     public static void main(String[] args) {
-        int[][] arr = new int[][] { { 1, 1, 1, },
-                { 1, 0, 1 },
-                { 1, 1, 1 } };
-        int n = 3;
-        int m = 3;
-        int[] row = new int[arr[0].length];
-        int[] column = new int[arr[0].length];
-        Arrays.fill(row,0);
-        Arrays.fill(column,0);
-        for(int i=0;i<n;i++){
-            for(int j=0;j<m;j++){
-                if(arr[i][j] == 0)  {
-                    row[i] = 1;
-                    column[j] = 1;
-                }
+        int[][] A = new int[][]{{1, 2, 3}, 
+                                {4, 5, 6}, 
+                                {7, 8, 9}};
+        int[][] B = new int[][]{{9, 8, 7}, 
+                                {6, 5, 4}, 
+                                {3, 2, 1}};  
+        int[][] C = new int[A.length][A[0].length];
+        for(int i=0; i < A.length; i++){
+            for (int j = 0; j < A[0].length; j++) {
+                C[i][j] = A[i][j] - B[i][j];
             }
         }
-        for(int i=0;i<n;i++){
-            for(int j=0;j<m;j++)
-                if(row[i] == 1 || column[j] == 1)  arr[i][j] = 0;
-        }
-        for(int i=0;i<n;i++){
-        for(int j=0;j<m;j++)
-        System.out.print(arr[i][j]+" ");
-        System.out.println();
+        for(int i=0; i < A.length; i++){
+            for (int j = 0; j < A[0].length; j++) {
+                System.out.print(C[i][j]+" ");
+            }
+            System.out.println();
         }
     }
 }
